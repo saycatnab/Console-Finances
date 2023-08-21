@@ -142,11 +142,23 @@ for(let index = 0; index < finances.length; index++){
       // ^ also means total = total + finances[index][index2], but in an easy way
       // What is happening above is while getting the $no. through iterating, it is adding to the total (so 1st: 0 + 867884 2nd: 867884 + 984655 and so on)
       //always console.log to see if it works: console.log(finances)
-       
+      change = finances[index][index2] - net
+      net = finances[index][index2]
+      // from screen shots
+      // change is current amount - previous amount(net)
+      //net is the previous amount
+      // netArray just keeps each net amount in an array(basically all the amounts) 
+      //refer to the screenshot img in folder
+      netArray.push(change)
+      console.log(`total: ${total}`)
+      console.log(`change: ${change}`)
+      console.log(`net: ${net}`)
+      console.log(`netArray: ${netArray}`)
+
     }
 
   }
 
 }
 
-console.log(`Total: $${total}`)
+// console.log(`Total: $${total}`)
