@@ -116,18 +116,29 @@ console.log(`Total Months: ${finances.length}`)
 // next added a .length within the 'new array' in console.log.
 
 
-// create an array
-let myNums = [1, 2, 3, 4, 5];
-
-// create a variable for the sum and initialize it
-let sum = 0;
-
-// iterate over each item in the array
-for (let i = 0; i < myNums.length; i++ ) {
-  sum += myNums[i];
-}
-
-console.log(sum) // 15
-
-
 // notes: write code again and again to keep it in his memory.
+
+let total = 0;
+
+let change = 0;
+
+let average;
+
+let net = 0;
+
+let netArray = []
+
+let netChangeSum = 0;
+
+
+for(let index = 0; index < finances.length; index++){
+
+//^ bscally this first for loop is for everything inside the first array (iterates through all 86 items), not the 84 arrays inside with the [month, money]
+
+  for(let index2 = 0; index2 < finances[index].length; index2++){
+
+    console.log(index2)
+
+  }
+
+}
