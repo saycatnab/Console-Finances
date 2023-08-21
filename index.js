@@ -136,9 +136,17 @@ for(let index = 0; index < finances.length; index++){
 //^ bscally this first for loop is for everything inside the first array (iterates through all 86 items), not the 84 arrays inside with the [month, money]
 
   for(let index2 = 0; index2 < finances[index].length; index2++){
-
-    console.log(index2)
+    //This second for loop is targetting the items months/ yr, $money inside the 86 arrays [month/ yr, $money]. like the first for loop is iterating thru the first array (finances, with all 84 items), this is a child for loop within, which would iterate inside the items IN the 84 arrays, so the month/yr and $money will be manipulated.
+    if(typeof finances[index][index2] !== `string`){
+      total += finances[index][index2]
+      // ^ also means total = total + finances[index][index2], but in an easy way
+      // What is happening above is while getting the $no. through iterating, it is adding to the total (so 1st: 0 + 867884 2nd: 867884 + 984655 and so on)
+      //always console.log to see if it works: console.log(finances)
+       
+    }
 
   }
 
 }
+
+console.log(`Total: $${total}`)
