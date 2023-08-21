@@ -108,9 +108,9 @@ var finances = [
 
 // console.log(count)
 
-finances[0].slice(0,86)
 
-console.log(`Total Months: ${finances.length}`)
+// V TOTAL MONTHS
+// console.log(`Total Months: ${finances.length}`)
 
 // in var finances i target the first array by adding [0] (position 1 as this is the only array item), then use the .slice method to return selected elements in an array, as a new array. And added the start 0 and end number 82 within a bracket.
 // next added a .length within the 'new array' in console.log.
@@ -176,3 +176,8 @@ average = Math.round((netChangeSum / 86) * 100) /100
 // e.g.  console.log(Math.round(0.9));
 //       Expected output: 1
 
+console.log(`Financial Analysis`)
+console.log(`-------------------`)
+console.log(`Total Months: ${finances.length}`)
+console.log(`Total: $${total}`)
+console.log(`Average Change: $${average}`)
