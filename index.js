@@ -150,15 +150,29 @@ for(let index = 0; index < finances.length; index++){
       // netArray just keeps each net amount in an array(basically all the amounts) 
       //refer to the screenshot img in folder
       netArray.push(change)
-      console.log(`total: ${total}`)
-      console.log(`change: ${change}`)
-      console.log(`net: ${net}`)
-      console.log(`netArray: ${netArray}`)
-
+      // console.log(`total: ${total}`)
+      // console.log(`change: ${change}`)
+      // console.log(`net: ${net}`)
+      // console.log(`netArray: ${netArray}`)
+      //commented out ^
     }
 
   }
 
 }
 
+for (let i=0; i< netArray.length; i++){
+  netChangeSum += netArray[i]
+  //bscally here the for loop is iterating through the netArray items (which has net items *check netArray in the screenshot) and adding up every net no.
+  
+}
+
+// console.log(netChangeSum)
+
 // console.log(`Total: $${total}`)
+
+average = Math.round((netChangeSum / 86) * 100) /100
+// Math.round() static method returns the value of a number rounded to the nearest integer.
+// e.g.  console.log(Math.round(0.9));
+//       Expected output: 1
+
