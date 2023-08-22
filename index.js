@@ -130,6 +130,12 @@ let netArray = []
 
 let netChangeSum = 0;
 
+let least = ['', 9999999999999]
+let greatest = ['', 0]
+// greatest has to be bigger than 0
+// least has to be smaller than 13, 9s
+
+
 
 for(let index = 0; index < finances.length; index++){
 
@@ -155,6 +161,12 @@ for(let index = 0; index < finances.length; index++){
       // console.log(`net: ${net}`)
       // console.log(`netArray: ${netArray}`)
       //commented out ^
+      if(change > greatest[1]){
+        greatest = [finances[index][0], finances[index][1]]
+      }
+      if(change < least[1]){
+        least = [finances[index][0], finances[index][1]]
+      }
     }
 
   }
@@ -171,13 +183,19 @@ for (let i=0; i< netArray.length; i++){
 
 // console.log(`Total: $${total}`)
 
-average = Math.round((netChangeSum / 86) * 100) /100
+average = Math.round((netChangeSum / finances.length) * 100) /100
 // Math.round() static method returns the value of a number rounded to the nearest integer.
 // e.g.  console.log(Math.round(0.9));
 //       Expected output: 1
 
-console.log(`Financial Analysis`)
-console.log(`-------------------`)
-console.log(`Total Months: ${finances.length}`)
-console.log(`Total: $${total}`)
-console.log(`Average Change: $${average}`)
+analysis = `
+Financial Analysis
+-------------------
+Total Months: ${finances.length}
+Total: $${total}
+Average Change: $${average}
+Greatest Increase in Profit: ${greatest[0]} : $${greatest[1]}
+Least Increase in Profit: ${least[0]} : $${least[1]}
+`
+
+console.log(analysis)
