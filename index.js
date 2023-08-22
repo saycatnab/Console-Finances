@@ -198,4 +198,3 @@ Greatest Increase in Profit: ${greatest[0]} : $${greatest[1]}
 Least Increase in Profit: ${least[0]} : $${least[1]}
 `
 
-console.log(analysis)
