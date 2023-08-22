@@ -11,6 +11,8 @@ Using this array, I have used logic to manipulate it to find out the following:
 - Greatest increase in profit
 - Greatest decrease in profit
 
+Please check the index.js to see the source code
+Please check the Deployed Application (https://saycatnab.github.io/Console-Finances/) to see the console.
 
 
 # Screenshots
@@ -20,3 +22,5 @@ This is how the Financial Analysis looks in the console
 ![Console Finances](./img/console%20Finances.png)
 
 # Link to Deployed Application
+
+https://saycatnab.github.io/Console-Finances/
